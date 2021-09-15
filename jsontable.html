@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap"
+		rel="stylesheet">
+	<title>Table</title>
+</head>
+
+<body>
+
+	<table class="table table-striped">
+		<!-- Создаем таблицу с использованием Data-атрибутов и спецсимволов -->
+		<tr class="bg-info">
+			<th data-column="name" data-order="desc">Имя<span class="sort-icon"> &#9650</span></th>
+			<th data-column="age" data-order="desc">Фамилия<span class="sort-icon"> &#9650</span></th>
+			<th data-column="birthday" data-order="desc">Описание<span class="sort-icon"> &#9650</span></th>
+			<th data-column="birthday" data-order="desc">Цвет глаз<span class="sort-icon"> &#9650</span></th>
+		</tr>
+		<tbody id="myTable">
+			<!-- Здесь будут добовлятся td элементы -->
+		</tbody>
+	</table>
+
+	<div class="form">
+		<!-- Создание формы редактирования данных выбранной строки -->
+		<form onsubmit="event.preventDefault();onFormSubmit();">
+			<div>
+				<label>Имя</label> <br>
+				<input type="text" name="first-name" id="first-name">
+			</div>
+			<div>
+				<label>Фамилия</label> <br>
+				<input type="text" name="last-name" id="last-name">
+			</div>
+			<div>
+				<label>Описание</label> <br>
+				<input type="text" name="about" id="about">
+			</div>
+			<div>
+				<label>Цвет глаз</label> <br>
+				<input type="text" name="eye-color" id="eye-color">
+			</div>
+			<div class="form-action-buttons">
+				<input type="submit" value="submit">
+				<!-- При клике на submit выполняется функция preventDefault(), onFormSubmit() -->
+			</div>
+		</form>
+	</div>
+
+
+
+	<script src="script.js"></script>
+</body>
+
+</html>
